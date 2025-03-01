@@ -1,0 +1,64 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "ced43b5af0ed44364e2eb51f108a9883",
+    "entities": [
+      {
+        "tableName": "VitalsData",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `bpm` TEXT NOT NULL, `mmhg` TEXT NOT NULL, `kg` TEXT NOT NULL, `kicks` TEXT NOT NULL, `dateTime` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bpm",
+            "columnName": "bpm",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mmhg",
+            "columnName": "mmhg",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kg",
+            "columnName": "kg",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kicks",
+            "columnName": "kicks",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dateTime",
+            "columnName": "dateTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ced43b5af0ed44364e2eb51f108a9883')"
+    ]
+  }
+}
