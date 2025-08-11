@@ -1,4 +1,4 @@
-Pregency vitals track
+#Pregency vitals track
 This project is built using Jetpack Compose for a modern and declarative UI. It follows the
 architecture to maintain a clear separation of concerns and ensure better scalability.
 For state management, the project uses StateFlow, ensuring a reactive and lifecycle-aware 
